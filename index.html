@@ -7,10 +7,23 @@
 </head>
 <body>
     <h1>Catrandomizer</h1>
-    <p>This is my own randomizer for the boardgame "Settlers of Catan". Simply click the button and it will generate a board according to the games rules.</p>
+    <p>This is my randomizer for the boardgame "Settlers of Catan". Simply click the button and it will generate a board according to the games rules.</p>
 <button onclick="helloworld()">Generate</button>
         <script>function helloworld(){
-        alert("Hello World");}</script>
+
+        const straw=new Image(220, 200);
+        straw.src="img/straw.png";
+
+        const steppe=new Image(220, 200)
+        steppe.src="img/steppe.png";
+
+        for (let i=1; i<2;i++){
+            document.body.appendChild(straw)+i;
+            document.body.appendChild(steppe)+i;
+        }
+        
+        }</script>
+        
 
 </body>
 </html>
