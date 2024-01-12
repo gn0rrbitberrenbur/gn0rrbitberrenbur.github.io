@@ -8,8 +8,8 @@
 <body>
     <h1>Catrandomizer</h1>
     <p>This is my randomizer for the boardgame "Settlers of Catan". Simply click the button and it will generate a board according to the games rules.</p>
-<button onclick="helloworld()">Generate</button>
-        <script>function helloworld(){
+<button onclick="catanboard()">Generate</button>
+        <script>function catanboard(){
 
         const straw=new Image(220, 200);
         straw.src="img/straw.png";
@@ -17,14 +17,36 @@
 
         const steppe=new Image(220, 200);
         steppe.src="img/steppe.png";
+
+
+        const mountain=new Image(220, 200);
+        straw.src="img/mountain.png";
+
+
+        const forrest=new Image(220, 200);
+        straw.src="img/forrest.png";
+
+
+        const clay=new Image(220, 200);
+        straw.src="img/clay.png";
         
         let x=Math.floor(Math.random()*4);
-        
-        if(x<2){
-            document.body.appendChild(steppe);
-        }else{
-            document.body.appendChild(straw);
+
+        for(let i=0,){
+
+
         }
+
+
+
+
+
+        
+     //   if(x==0){
+     //       document.body.appendChild(steppe);
+     //   }else{
+     //       document.body.appendChild(straw);
+     //   }
         
         
         }</script>
