@@ -18,11 +18,14 @@
         const steppe=new Image(220, 200);
         steppe.src="img/steppe.png";
         
-
-        for (let i=1; i<2;i++){
-            document.body.appendChild(straw)+i;
-            document.body.appendChild(steppe)+i;
+        let x=Math.floor(Math.random()*4);
+        
+        if(x<2){
+            document.body.appendChild(steppe);
+        }else{
+            document.body.appendChild(straw);
         }
+        
         
         }</script>
         
