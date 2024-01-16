@@ -1,6 +1,8 @@
 body{
     margin: o;
-    background-color: beige;
+    background-color: black;
+    color: azure;
+    scroll-behavior: smooth;
     text-align: center;
     font: 1.2em "Arial",system-ui;
     
