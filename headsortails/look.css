@@ -7,6 +7,25 @@ body{
     font: 1.2em "Arial",system-ui;
 }
 
+.button{
+    position: absolute;
+    top:40%;
+    border:none;
+    border-radius: 10px;
+    min-height: 40px;
+    min-width: 80px;
+    
+}
+
+.button:hover{
+    background-color:#E0B343;
+    transition: 0.7s;
+}
+
+.button:active{
+    background-color: #ffbf00;
+
+}
 
 
 
