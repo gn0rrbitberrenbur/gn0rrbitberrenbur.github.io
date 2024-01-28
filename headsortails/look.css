@@ -7,20 +7,7 @@ body{
     font: 1.2em "Arial",system-ui;
 }
 
-#coin {
-    position: relative;
-    margin: 0 auto;
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-}
 
-#coin div{
-    width: 100px;
-    height: 100px;
-}
 
-.side a{
-    
-}
+
 
