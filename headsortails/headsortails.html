@@ -7,29 +7,17 @@
 </head>
 <body>
     <h1>Heads or Tails</h1>
-    <canvas id="space" width="1000px" height="1000px"></canvas>
-    <img id="head" src="imgheadortails/head.png" width="200" height="200">
-    <img id="tails" src="imgheadortails/tail.png" width="140" height="140">
-    <button onclick="flip()">Flip</button>
-    <button onclick="clear()">Clear</button>
+    <button onclick="flip()">Toss Coin</button>
     <script>
         function flip(){
-    var x=Math.floor(Math.random()*2);
-    var headsimg=document.getElementById("head");
-    var tailsimg=document.getElementById("tails");
-    var canvas=document.getElementById("space")
-    var ctx=canvas.getContext("2d");
-    if(x==1){ ctx.drawImage(
-        headsimg, 250,250
-    )}
-    else{
-        ctx.drawImage(
-        tailsimg, 250,250
-    )}
-}
-    function clear(){
-        ctx.clearRect(0, 0, space.width, space.height);
-        space.width=1;
-        space.height=w;
-    }
+            var x= Math.floor(Math.random()*2);
+
+            if(x==1){
+                alert("Heads");
+            }
+            else{
+                alert("Tails");
+            }
+        }
     </script>
+  
