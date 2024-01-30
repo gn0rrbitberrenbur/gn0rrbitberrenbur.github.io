@@ -1,7 +1,12 @@
+:root{
+    --main-bg-color:#E1F0DA;
+    --primary-color:#D4E7C5;
+    --secondary-color:#BFD8AF;
+    --font-color:#99BC85;
+
+}
 body{
     margin: o;
-    background-color: black;
-    color: azure;
     scroll-behavior: smooth;
     text-align: center;
     font: 1.2em "Arial",system-ui;
