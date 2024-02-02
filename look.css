@@ -3,8 +3,8 @@
     --font-color:#98971a;
     --link-color:#458588;
     --link-visited-color:#b16286;
-    --navbar-color:#b57614;
-    --navbar-hover:#d79921;
+    --navbar-color:#f8f8f2;
+    --navbar-hover:#7c6f64;
 
 }
 body{
@@ -13,7 +13,7 @@ body{
     color: var(--font-color);
     background-color: var(--main-bg-color);
     text-align: center;
-    font: 1.2em "Arial",system-ui;
+    font: 1.2em "Helvetica",system-ui;
 }
 
 .navbar ul{
@@ -21,6 +21,7 @@ body{
     background-color: var(--navbar-color);
     padding: 0px;
     margin: 0px;
+    overflow: hidden;
 }
 
 .navbar a{
@@ -32,7 +33,12 @@ body{
 }
 
 .navbar a:hover{
-    background-color: var(--navar-hover);
+    background-color: var(--navbar-hover);
+}
+
+.navbar li{
+    float: left;
+    
 }
 
 a:link{
@@ -49,7 +55,7 @@ a:visited{
         --font-color:#98971a;
         --link-color:#458588;
         --link-visited-color:#b16286;
-        --navbar-color:#fabd2f;
-        --navar-hover:#d79921;
+        --navbar-color:#f8f8f2;
+        --navbar-hover:#a89984;
         } 
 }

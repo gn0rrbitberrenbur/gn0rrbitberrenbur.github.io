@@ -12,6 +12,7 @@ body{
     scroll-behavior: smooth;
     text-align: center;
     font: 1.2em "Arial",system-ui;
+    list-style-type:none;
     }
 
     a:link{
