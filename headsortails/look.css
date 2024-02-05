@@ -1,11 +1,10 @@
 :root{
-    --main-bg-color:#fbf1c7;
-    --font-color:#98971a;
-    --link-color:#458588;
-    --link-visited-color:#b16286;
-    --button-hover-color:#8ec07c;
-    --button-active-color:#689d6a;
-    
+    --main-bg-color:#faf4ed;
+    --font-color:#575279;
+    --link-color:#286983;
+    --navbar-color:#f4ede8;
+    --navbar-hover:#cecacd;
+
 }
 body{
     margin: o;
@@ -36,13 +35,46 @@ body{
     background-color:var(--button-active-color);
 
 }
+
+.navbar ul{
+    list-style-type: none;
+    background-color: var(--navbar-color);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.navbar a{
+    color: var(--font-color);
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover{
+    background-color: var(--navbar-hover);
+}
+
+.navbar li{
+    float: left;
+    
+}
+
+a:link{
+    color: var(--link-color);
+}
+
+a:visited{
+    color: var(--link-color)
+}
+
 @media(prefers-color-scheme: dark){ 
     :root{
-        --main-bg-color:#282828;
-        --font-color:#98971a;
-        --link-color:#458588;
-        --link-visited-color:#b16286;
-        --button-hover-color:#689d6a;
-        --button-active-color:#427b58;
-    }
+        --main-bg-color:#232136;
+        --font-color:#e0def4;
+        --link-color:#3e8fb0;
+        --navbar-color:#393552;
+        --navbar-hover:#56526e;
+        } 
 }

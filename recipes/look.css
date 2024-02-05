@@ -1,9 +1,10 @@
 :root{
-    --main-bg-color:#faf4ed;
-    --font-color:#575279;
-    --link-color:#286983;
-    --navbar-color:#f4ede8;
-    --navbar-hover:#cecacd;
+    --main-bg-color:#fbf1c7;
+    --font-color:#98971a;
+    --link-color:#458588;
+    --link-visited-color:#b16286;
+    --navbar-color:#f8f8f2;
+    --navbar-hover:#7c6f64;
 
 }
 body{
@@ -45,15 +46,16 @@ a:link{
 }
 
 a:visited{
-    color: var(--link-color)
+    color: var(--link-visited-color)
 }
 
 @media(prefers-color-scheme: dark){ 
     :root{
-        --main-bg-color:#232136;
-        --font-color:#e0def4;
-        --link-color:#3e8fb0;
-        --navbar-color:#393552;
-        --navbar-hover:#56526e;
+        --main-bg-color:#282828;
+        --font-color:#98971a;
+        --link-color:#458588;
+        --link-visited-color:#b16286;
+        --navbar-color:#f8f8f2;
+        --navbar-hover:#a89984;
         } 
 }
