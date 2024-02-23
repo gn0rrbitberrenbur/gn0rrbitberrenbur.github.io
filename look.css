@@ -6,6 +6,11 @@
     --navbar-hover:#cecacd;
 
 }
+
+img {
+    width: 100%;
+    height: auto;
+}
 body{
     margin: o;
     scroll-behavior: smooth;
@@ -21,6 +26,8 @@ body{
     padding: 0px;
     margin: 0px;
     overflow: hidden;
+    width: 100%;
+    height: auto;
 }
 
 .navbar a{
