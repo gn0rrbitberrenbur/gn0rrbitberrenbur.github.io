@@ -24,8 +24,45 @@ a:visited{
 
 @media(prefers-color-scheme: dark){ 
     :root{
-        --main-bg-color:#000000;
-        --font-color:#ffffff;
-        --link-color:#286983;
+        --main-bg-color:#282828;
+        --font-color:#fbf1c7;
+        --link-color:#83a598;
         } 
 }
+/* sidebar menu */
+.sidenav{
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #525252;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+/* navbar links */
+.sidenav a{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+}
+
+/* hover over links */
+
+.sidenav a:hover{
+    color: #f1f1f1;
+}
+
+.main{
+    margin-left: 160px;
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
