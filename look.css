@@ -1,7 +1,7 @@
 :root{
-    --main-bg-color:#ffffff;
-    --font-color:#000000;
-    --link-color:#286983;    
+    --main-bg-color:#282828;
+    --font-color:#fbf1c7;
+    --link-color:#83a598;   
 }
 
 body{
@@ -13,7 +13,6 @@ body{
     font: 1.2em "Helvetica",
 }
 
-
 a:link{
     color: var(--link-color);
 }
@@ -22,13 +21,6 @@ a:visited{
     color: var(--link-color)
 }
 
-@media(prefers-color-scheme: dark){ 
-    :root{
-        --main-bg-color:#282828;
-        --font-color:#fbf1c7;
-        --link-color:#83a598;
-        } 
-}
 /* sidebar menu */
 .sidenav{
     height: 100%;
@@ -37,9 +29,12 @@ a:visited{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #525252;
+    background-color: #282828;
     overflow-x: hidden;
     padding-top: 20px;
+    border-width: 1px;
+    border-style:dashed;
+    border-color: #fbf1c7;
 }
 
 /* navbar links */
@@ -52,7 +47,6 @@ a:visited{
 }
 
 /* hover over links */
-
 .sidenav a:hover{
     color: #f1f1f1;
 }
@@ -65,4 +59,4 @@ a:visited{
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-  }
+}
