@@ -27,8 +27,9 @@ a:visited{
     width: 100px;
     position: fixed;
     z-index: 1;
-    top: 0;
-    left: 0;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
     background-color: #282828;
     overflow-x: hidden;
     padding-top: 20px;
