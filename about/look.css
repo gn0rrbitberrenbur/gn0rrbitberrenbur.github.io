@@ -21,3 +21,10 @@ a:link{
 a:visited{
     color: var(--link-color)
 }
+
+.goBack{
+    position: fixed;
+    top: 150px;
+    left: 350px; 
+    float: left;
+}
