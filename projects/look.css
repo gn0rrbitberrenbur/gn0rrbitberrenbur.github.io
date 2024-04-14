@@ -1,0 +1,30 @@
+:root{
+    --main-bg-color:#282828;
+    --font-color:#fbf1c7;
+    --link-color:#83a598;       
+}
+
+body{
+    margin: o;
+    scroll-behavior: smooth;
+    color: var(--font-color);
+    background-color: var(--main-bg-color);
+    text-align: center;
+    font: 1.2em "Helvetica",
+}
+
+
+a:link{
+    color: var(--link-color);
+}
+
+a:visited{
+    color: var(--link-color)
+}
+
+.goBack{
+    position: fixed;
+    top: 150px;
+    left: 350px; 
+    float: left;
+}

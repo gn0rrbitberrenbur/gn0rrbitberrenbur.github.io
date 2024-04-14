@@ -22,33 +22,24 @@ a:visited{
 }
 
 /* sidebar menu */
-.sidenav{
-    height: 100%;
-    width: 100px;
-    position: fixed;
-    z-index: 1;
-    top: 20px;
-    bottom: 20px;
-    left: 20px;
-    background-color: #282828;
-    overflow-x: hidden;
-    padding-top: 20px;
-    border-width: 1px;
-    border-style:dashed;
-    border-color: #fbf1c7;
+.box{
+    border: 1px solid green;
+    height: 50px;
+    width: 400px;
+    margin: auto;
 }
 
 /* navbar links */
-.sidenav a{
+.box a{
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 20px;
     color: #818181;
-    display: block;
+    display: inline;
 }
 
 /* hover over links */
-.sidenav a:hover{
+.box a:hover{
     color: #f1f1f1;
 }
 
