@@ -23,7 +23,7 @@ a:visited{
 
 /* sidebar menu */
 .box{
-    border: 1px solid green;
+    border: 1px solid var(--font-color);
     height: 50px;
     width: 400px;
     margin: auto;
@@ -46,9 +46,4 @@ a:visited{
 .main{
     margin-left: 160px;
     padding: 0px 10px;
-}
-
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
 }
