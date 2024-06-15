@@ -33,9 +33,7 @@ a:visited{
 .box a{
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: ;20px
-    color: #818181;
-    display: inline;
+    font-size: 20px
 }
 
 /* hover over links */
@@ -43,6 +41,3 @@ a:visited{
     color: #f1f1f1;
 }
 
-.main{
-    padding: 0px 10px;
-}
