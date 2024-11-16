@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"></link>
+    <title>Chris' Website</title>
+</head>
+
+<script src="colourModeToggle.js"></script>
+<script src="quotes.js"></script>
+
+<body onload="getLightState(); loadQuote()">
+
+    <nav>
+        <a href="/index.html">/home/</a>
+        <a href="/blog/blogIndex.html">/blog/</a>
+        <a href="/about/aboutIndex.html">/about/</a>
+        <a href="/tools/toolsIndex.html">/tools/</a>
+        <a id= "lightsToggle", onclick= "toggle()"">/lights on/</a>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+
+    <h1 class="LandingHeader">
+    Chris' Page        
+    </h1>
+
+    <hr class="SeparatorLine">
+
+    <br>
+
+    <p class="LandingText">
+        My name is Chris, and I'm a Computer enthusiast. My interests span computer science, natural sciences, and economics. 
+        Currently, I'm completing an apprenticeship in CS. In my free time, you can find me programming, hiking,
+        running, reading, and cooking. This website was created as a way to teach myself some web development.
+        Oh and here's a random stoic quote for you:
+    </p>
+
+    <br>
+
+    <div class="quote" id="quote" onclick="loadQuote()"></div>
+    <div class="author" id="author"></div>
+    
+
+    <hr class="SeparatorLine">
+
+    <p class="SiteEnding">made with ❤ using pure html, css and javascript</p>
+    
+</body>
+</html>

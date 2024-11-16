@@ -1,0 +1,106 @@
+:root {
+    --bg-color-dark: #222529;
+    --font-color-dark: #D6D6D6;
+
+    --bg-color-light: #EEEEEE;
+    --font-color-light: #41474E;
+}
+
+.light-mode {
+    background-color: var(--bg-color-light);
+    color: var(--font-color-light);
+    
+    
+}
+
+body {
+    background-color: var(--bg-color-dark);
+    color: var(--font-color-dark);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: fixed;
+    top: 15px;
+    right: 0;
+    font-size: 15px;
+    width: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: default;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    nav {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+a:link, a:visited {
+    color: var(--font-color-dark);
+    text-decoration: none;
+    padding: 5px 10px;
+    cursor: default;
+}
+
+.light-mode a:link, .light-mode a:visited {
+    color: var(--font-color-light);  /* Schriftfarbe für Links im Light Mode */
+}
+
+
+a:hover {
+    background-color: var(--font-color-dark);
+    color: var(--bg-color-dark);
+    border-radius: 2px;
+    cursor: default;
+}
+
+/* Container für Titel und Datum */
+.title-date-container {
+    display: flex;
+    justify-content: space-evenly; /* sorgt dafür, dass Titel und Datum am jeweiligen Rand ausgerichtet sind */
+    align-items: center;
+    margin-top: 150px; /* Abstand nach oben */
+    width: 80%; /* Breite des Containers */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styling für den Blogtitel */
+h1.TitlePost {
+    text-align: left;
+    margin: 0; /* Entfernt den Standardabstand */
+}
+
+/* Styling für das Datum */
+a.Date {
+    text-align: right;
+    margin: 0; /* Entfernt den Standardabstand */
+}
+
+hr.SeparatorLine {
+    height: 2px;
+    border-width: 0;
+    width: 50%;
+    color: var(--font-color-dark);
+    background-color: var(--font-color-dark);
+    margin: 20px auto;
+}
+
+p.LandingText {
+    text-align: center;
+    width: 50%;
+    margin: 20px auto;
+}
+
+p.SiteEnding {
+    text-align: center;
+    width: 50%;
+    margin: 20px auto;
+}

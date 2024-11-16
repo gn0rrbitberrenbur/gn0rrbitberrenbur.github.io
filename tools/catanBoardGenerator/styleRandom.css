@@ -1,0 +1,137 @@
+:root {
+    --bg-color-dark: #222529;
+    --font-color-dark: #D6D6D6;
+
+    --bg-color-light: #EEEEEE;
+    --font-color-light: #41474E;
+}
+
+.light-mode {
+    background-color: var(--bg-color-light);
+    color: var(--font-color-light);
+}
+
+body {
+    background-color: var(--bg-color-dark);
+    color: var(--font-color-dark);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: fixed;
+    top: 15px;
+    right: 0;
+    font-size: 15px;
+    width: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: default;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    nav {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+a:link, a:visited {
+    color: var(--font-color-dark);
+    text-decoration: none;
+    padding: 5px 10px;
+    cursor: default;
+}
+
+.light-mode a:link, .light-mode a:visited {
+    color: var(--font-color-light);
+}
+
+a:hover {
+    background-color: var(--font-color-dark);
+    color: var(--bg-color-dark);
+    border-radius: 2px;
+    cursor: default;
+}
+
+h1.HeadlineTools {
+    text-align: center;
+    margin-top: 150px;
+}
+
+hr.SeparatorLine {
+    height: 2px;
+    border-width: 0;
+    width: 50%;
+    color: var(--font-color-dark);
+    background-color: var(--font-color-dark);
+    margin: 20px auto;
+}
+
+p.SiteEnding {
+    text-align: center;
+}
+
+/* Catan Randomizer */
+.board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 600px; /* board size, bleibt konstant */
+    margin: auto;
+    height: auto; /* Keine Größenänderung basierend auf der Fenstergröße */
+}
+
+.hex {
+    width: 100px; /* Feste Hexagon-Größe */
+    height: 100px; /* Feste Hexagon-Größe */
+    margin: 0;
+    margin-bottom: -25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    font-weight: bold;
+    color: #000000;
+    outline-style: solid;
+    outline-color: var(--font-color-dark);
+    font-size: 1rem; /* Schriftgröße bleibt konstant */
+    text-align: center; /* Textzentrierung */
+    line-height: 1.1; /* Textüberlauf verhindern */
+    padding: 0; /* Kein zusätzliches Padding */
+    box-sizing: border-box; /* Verhindert, dass Padding oder Border das Hexagon vergrößern */
+}
+
+/* resource colours */
+.hex-forest { background-color: #a4d5a6; } /* lumber */
+.hex-grain { background-color: #d7c77e; } /* grain */
+.hex-brick { background-color: #c8583c; } /* brick */
+.hex-sheep { background-color: #EDDFE0; } /* wool */
+.hex-ore { background-color: #b7c3d7; } /* ore */
+.hex-desert { background-color: #FFD700; } /* Wüste (gelb) */
+
+.hex-number {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 0.6rem; /* Kleinere Schrift für die Hex-Zahl */
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Breite der Zeile */
+}
+
+/* Versetzte Reihen für das hexagonale Layout */
+.row:nth-child(1) { margin-left: 0; } /* 1. Reihe */
+.row:nth-child(2) { margin-left: 0; } /* 2. Reihe */
+.row:nth-child(3) { margin-left: 0; } /* 3. Reihe */
+.row:nth-child(4) { margin-left: 0; } /* 4. Reihe */
+.row:nth-child(5) { margin-left: 0; } /* 5. Reihe */
