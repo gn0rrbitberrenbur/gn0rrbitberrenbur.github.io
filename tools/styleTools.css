@@ -50,7 +50,7 @@ a:link, a:visited {
 }
 
 .light-mode a:link, .light-mode a:visited {
-    color: var(--font-color-light);  /* Schriftfarbe für Links im Light Mode */
+    color: var(--font-color-light);  /* font color for light mode */
 }
 
 
@@ -76,11 +76,11 @@ hr.SeparatorLine {
 }
 
 a.ToolsContent {
-    display: block;           /* Macht den Link wie ein Blockelement */
-    text-align: center;       /* Falls der Text im Link auch zentriert werden soll */
-    margin: 20px auto;        /* Zentriert den Link horizontal */
-    width: fit-content;       /* Der Link wird nur so breit wie der Text */
-    padding: 10px;            /* Optional: Etwas Abstand um den Link */
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    width: fit-content;
+    padding: 10px;
 }
 
 p.SiteEnding {

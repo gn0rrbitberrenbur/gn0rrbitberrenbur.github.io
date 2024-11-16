@@ -50,7 +50,7 @@ a:link, a:visited {
 }
 
 .light-mode a:link, .light-mode a:visited {
-    color: var(--font-color-light);  /* Schriftfarbe für Links im Light Mode */
+    color: var(--font-color-light);  /* font color for light mode */
 }
 
 
@@ -61,27 +61,25 @@ a:hover {
     cursor: default;
 }
 
-/* Container für Titel und Datum */
+/* Container for title and date */
 .title-date-container {
     display: flex;
-    justify-content: space-evenly; /* sorgt dafür, dass Titel und Datum am jeweiligen Rand ausgerichtet sind */
+    justify-content: space-evenly;
     align-items: center;
-    margin-top: 150px; /* Abstand nach oben */
-    width: 80%; /* Breite des Containers */
+    margin-top: 150px;
+    width: 80%; 
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Styling für den Blogtitel */
 h1.TitlePost {
     text-align: left;
-    margin: 0; /* Entfernt den Standardabstand */
+    margin: 0;
 }
 
-/* Styling für das Datum */
 a.Date {
     text-align: right;
-    margin: 0; /* Entfernt den Standardabstand */
+    margin: 0;
 }
 
 hr.SeparatorLine {

@@ -50,7 +50,7 @@ a:link, a:visited {
 }
 
 .light-mode a:link, .light-mode a:visited {
-    color: var(--font-color-light);  /* Schriftfarbe für Links im Light Mode */
+    color: var(--font-color-light);  /* font color for light mode */
 }
 
 

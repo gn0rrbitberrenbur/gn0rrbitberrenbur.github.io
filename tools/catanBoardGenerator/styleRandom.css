@@ -82,14 +82,14 @@ p.SiteEnding {
     flex-direction: column;
     align-items: center;
     position: relative;
-    width: 600px; /* board size, bleibt konstant */
+    width: 600px;
     margin: auto;
-    height: auto; /* Keine Größenänderung basierend auf der Fenstergröße */
+    height: auto;
 }
 
 .hex {
-    width: 100px; /* Feste Hexagon-Größe */
-    height: 100px; /* Feste Hexagon-Größe */
+    width: 100px;
+    height: 100px;
     margin: 0;
     margin-bottom: -25px;
     display: flex;
@@ -101,11 +101,11 @@ p.SiteEnding {
     color: #000000;
     outline-style: solid;
     outline-color: var(--font-color-dark);
-    font-size: 1rem; /* Schriftgröße bleibt konstant */
-    text-align: center; /* Textzentrierung */
-    line-height: 1.1; /* Textüberlauf verhindern */
-    padding: 0; /* Kein zusätzliches Padding */
-    box-sizing: border-box; /* Verhindert, dass Padding oder Border das Hexagon vergrößern */
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.1;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* resource colours */
@@ -114,24 +114,24 @@ p.SiteEnding {
 .hex-brick { background-color: #c8583c; } /* brick */
 .hex-sheep { background-color: #EDDFE0; } /* wool */
 .hex-ore { background-color: #b7c3d7; } /* ore */
-.hex-desert { background-color: #FFD700; } /* Wüste (gelb) */
+.hex-desert { background-color: #FFD700; } /* desert */
 
 .hex-number {
     position: absolute;
     top: 25px;
     left: 25px;
-    font-size: 0.6rem; /* Kleinere Schrift für die Hex-Zahl */
+    font-size: 0.6rem;
 }
 
 .row {
     display: flex;
     justify-content: center;
-    width: 100%; /* Breite der Zeile */
+    width: 100%;
 }
 
-/* Versetzte Reihen für das hexagonale Layout */
-.row:nth-child(1) { margin-left: 0; } /* 1. Reihe */
-.row:nth-child(2) { margin-left: 0; } /* 2. Reihe */
-.row:nth-child(3) { margin-left: 0; } /* 3. Reihe */
-.row:nth-child(4) { margin-left: 0; } /* 4. Reihe */
-.row:nth-child(5) { margin-left: 0; } /* 5. Reihe */
+/* board layout */
+.row:nth-child(1) { margin-left: 0; } /* 1st row */
+.row:nth-child(2) { margin-left: 0; } /* 2nd row */
+.row:nth-child(3) { margin-left: 0; } /* 3rd row */
+.row:nth-child(4) { margin-left: 0; } /* 4th row */
+.row:nth-child(5) { margin-left: 0; } /* 5th row */

@@ -1,5 +1,5 @@
 function loadQuote() { 
-    fetch('resources/quotes.json') // Stelle sicher, dass der Pfad korrekt ist
+    fetch('resources/quotes.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Netzwerkantwort war nicht ok: ' + response.status);
@@ -7,7 +7,7 @@ function loadQuote() {
             return response.json();
         })
         .then(data => {
-            const quotes = data.quotes; // Zugriff auf das Zitat-Array
+            const quotes = data.quotes; // access quote-arary
             const randomIndex = Math.floor(Math.random() * quotes.length);
             const quote = quotes[randomIndex];
             document.getElementById('quote').innerText = quote.text;
@@ -18,5 +18,4 @@ function loadQuote() {
         });
 }
 
-// Beim Laden der Seite ein Zitat anzeigen
-window.onload = loadQuote; // Aufruf der Funktion beim Laden der Seite
+window.onload = loadQuote;
