@@ -1,0 +1,3 @@
+the file "quotes.json" is a modified version of the file "quotes.json" found in the following repository:
+
+https://github.com/benhoneywill/stoic-quotes
