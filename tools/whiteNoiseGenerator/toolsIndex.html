@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleTools.css"></link>
+    <title id="title">Chris' Website</title>
+    <link rel="icon" type="image/x-icon" href="/resources/icon.ico">
+</head>
+
+<script src="/javascript/colourModeToggle.js"></script>
+
+<body onload="getLightState()">
+
+    <nav>
+        <a href="/index.html">/home/</a>
+        <a href="/blog/blogIndex.html">/blog/</a>
+        <a href="/tools/toolsIndex.html">/tools/</a>
+        <a id= "lightsToggle", onclick= "toggle()"">/lights on/</a>
+    </nav>
+
+    <h1 class="HeadlineTools">White Noise</h1>
+
+    <hr class="SeparatorLine">
+
+    <br>
+
+        <div id="whiteNoise">
+            <button id="startStopButton">Start White Noise</button>
+            <br>
+            <label for="timerInput">Timer-Duration (up to 60 minutes): </label>
+            <input type="number" id="timerInput" value="1" min="1" max="59" step="1">
+            <button id="startButton" onclick="">Start</button>
+            <div id="countdownDisplay"></div>
+            
+            <br>
+            <label for="volume">Volume:</label>
+            <input type="range" id="volume" min="0" max="1" step="0.01" value="0.25">
+            <br>
+            <label for="frequency">Frequency:</label>
+            <input type="range" id="frequency" min="20" max="20000" step="100" value="5000">
+            <span id="frequencyValue">10000 Hz</span> <!-- Anzeige des Frequenzwerts -->
+            </div>
+        
+        <script src="/tools/whiteNoiseGenerator/whiteNoise.js"></script>
+
+    <br>
+
+    <hr class="SeparatorLine">
+
+    <p class="SiteEnding">licensed under MIT</p>
+    <p class="SiteEnding">made with <a class="Heart" 
+        style="color: #d26878;">❤</a> 
+        using pure html, css and javascript</p>
+    
+</body>
+</html>
