@@ -23,17 +23,6 @@ body {
     text-align: center;
 }
 
-/* nav {
-    position: absolute;
-    top: 15px;
-    right: 25%;
-    font-size: 15px;
-    cursor: default;
-}
-
-legacy
-*/
-
 nav {
     position: fixed;
     top: 15px;
@@ -75,6 +64,11 @@ a:hover {
     cursor: default;
 }
 
+.LinkContainer {
+    text-align: left;
+    margin: 20px auto;
+    width: 50%;
+}
 
 pre.LandingHeader {
     text-align: center;
@@ -90,8 +84,15 @@ hr.SeparatorLine {
     margin: 20px auto;
 }
 
+
+h1.LandingHeader {
+    text-align: left;
+    width: 50%;
+    margin: 20px auto;
+}
+
 p.LandingText {
-    text-align: center;
+    text-align: left;
     width: 50%;
     margin: 20px auto;
 }
