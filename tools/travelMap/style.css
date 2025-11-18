@@ -1,0 +1,274 @@
+:root {
+    --bg-color-dark: #222529;
+    --font-color-dark: #D6D6D6;
+
+    --bg-color-light: #EEEEEE;
+    --font-color-light: #41474E;
+}
+
+.light-mode {
+    background-color: var(--bg-color-light);
+    color: var(--font-color-light);
+    
+    
+}
+
+body {
+    background-color: var(--bg-color-dark);
+    color: var(--font-color-dark);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: fixed;
+    top: 15px;
+    right: 0;
+    font-size: 15px !important;
+    width: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: default;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    nav {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+a:link, a:visited {
+    color: var(--font-color-dark);
+    text-decoration: none;
+    padding: 5px 10px;
+    cursor: default;
+}
+
+.light-mode a:link, .light-mode a:visited {
+    color: var(--font-color-light);  /* font color for light mode */
+}
+
+a:hover {
+    background-color: var(--font-color-dark);
+    color: var(--bg-color-dark);
+    border-radius: 2px;
+    cursor: default;
+}
+
+h1.HeadlineTools {
+    text-align: center;
+    margin-top: 150px;
+}
+
+hr.SeparatorLine {
+    height: 2px;
+    border-width: 0;
+    width: 50%;
+    color: var(--font-color-dark);
+    background-color: var(--font-color-dark);
+    margin: 20px auto;
+}
+
+a.ToolsContent {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    width: fit-content;
+    padding: 10px;
+}
+
+p.SiteEnding {
+    text-align: center;
+    width: 50%;
+    margin: 20px auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+}
+
+#map {
+    position: absolute;
+    top: 10%;
+    bottom: 5%;
+    height: 85%;
+    width: 100%;
+}
+
+.controls {
+    position: absolute;
+    top: 80%;
+    transform: translateY(-100%);
+    right: 0%;
+    transform-origin: top right;
+    z-index: 1000;
+    background: var(--bg-color-dark);
+    color: var(--font-color-dark);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    max-height: calc(80vh - 40px);
+    overflow-y: auto;
+    width: 250px;
+}
+
+
+.controls h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: var(--font-color-dark);
+    color: var(--bg-color-dark);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.info {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #666;
+}
+
+.info p {
+    margin: 3px 0;
+}
+
+.color-picker-container {
+    margin: 10px 0;
+}
+
+.color-picker-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+#colorPicker {
+    width: 100%;
+    height: 40px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.icon-selector {
+    margin: 10px 0;
+}
+
+.icon-selector label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.icon-option {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.icon-option:hover {
+    background-color: #f0f0f0;
+}
+
+.icon-option.selected {
+    border-color: #4CAF50;
+    background-color: #e8f5e9;
+}
+
+.icon-option i {
+    font-size: 20px;
+}
+
+.custom-marker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    font-size: 16px;
+}
+
+.controls::-webkit-scrollbar {
+    width: 8px;
+}
+
+.controls::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.controls::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.controls::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#screenshotCanvas {
+    display: none;
+}
+
+.leaflet-tile-container {
+    font-size: 0;
+    line-height: 0;
+}
+
+.leaflet-tile {
+    display: block;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    outline: 0 !important;
+}
+
+.leaflet-layer,
+.leaflet-tile-pane {
+    transform: translate3d(0, 0, 0);
+}
+
+img.leaflet-tile {
+    max-width: none !important;
+    max-height: none !important;
+    width: 256px !important;
+    height: 256px !important;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chris website</title>
+    <link rel="icon" type="image/x-icon" href="/resources/icon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="fontawesome-free-7.1.0-web/css/all.min.css" />    
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<script src="/javascript/colourModeToggle.js"></script>
+
+<body onload="getLightState()">
+
+    <nav>
+        <a href="/index.html">/home/</a>
+        <a href="/blog/blogIndex.html">/blog/</a>
+        <a href="/tools/toolsIndex.html">/tools/</a>
+        <a id= "lightsToggle", onclick= "toggle()"">/lights on/</a>
+    </nav>
+
+    <div class="controls">
+        <h3>🗺️ Kartensteuerung</h3>
+        <button id="toggleMarker">Marker Mode: OFF</button>
+        
+        <div class="color-picker-container">
+            <label for="colorPicker">Marker Colour:</label>
+            <input type="color" id="colorPicker" value="#ff0000">
+        </div>
+        
+        <div class="icon-selector">
+            <label>Marker Symbol:</label>
+            <div class="icon-grid">
+                <div class="icon-option selected" data-icon="map-marker-alt" title="Standard Pin">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="icon-option" data-icon="home" title="Zuhause">
+                    <i class="fas fa-home"></i>
+                </div>
+                <div class="icon-option" data-icon="heart" title="Favorit">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="icon-option" data-icon="star" title="Wichtig">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="icon-option" data-icon="flag" title="Flagge">
+                    <i class="fas fa-flag"></i>
+                </div>
+                <div class="icon-option" data-icon="coffee" title="Café">
+                    <i class="fas fa-coffee"></i>
+                </div>
+                <div class="icon-option" data-icon="utensils" title="Restaurant">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <div class="icon-option" data-icon="shopping-cart" title="Einkaufen">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="icon-option" data-icon="car" title="Parkplatz">
+                    <i class="fas fa-car"></i>
+                </div>
+                <div class="icon-option" data-icon="hospital" title="Krankenhaus">
+                    <i class="fas fa-hospital"></i>
+                </div>
+                <div class="icon-option" data-icon="graduation-cap" title="Schule">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="icon-option" data-icon="music" title="Musik">
+                    <i class="fas fa-music"></i>
+                </div>
+            </div>
+        </div>
+        
+        <button id="clearMarkers" class="delete">Delete all markers</button>
+        <button id="saveMap" class="save">Save Map as Image</button>
+        <div class="info">
+            <p><strong>Markers set:</strong> <span id="markerCount">0</span></p>
+            <p><small>Click on the Map to set a Marker!</small></p>
+        </div>
+    </div>
+    
+    <div id="map"></div>
+    <canvas id="screenshotCanvas"></canvas>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
