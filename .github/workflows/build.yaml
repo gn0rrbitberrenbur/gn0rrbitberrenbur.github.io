@@ -36,6 +36,11 @@ jobs:
         env:
           BASE_PATH: '/'
 
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./gn0rrbits-website/build
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
