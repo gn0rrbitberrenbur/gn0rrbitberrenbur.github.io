@@ -19,17 +19,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
-      - run: npm ci
-      - run: npm run build
+          cache-dependency-path: gn0rrbits-website/package-lock.json
+
+      - name: Install dependencies
+        working-directory: ./gn0rrbits-website
+        run: npm ci
+
+      - name: Build site
+        working-directory: ./gn0rrbits-website
+        run: npm run build
         env:
           BASE_PATH: '/'
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: build
 
   deploy:
     needs: build
