@@ -13,24 +13,36 @@
 
 <style>
     :root {
-        --bg: #eff1f5;
-        --text: #4c4f69;
-        --muted: #333;
-        --border: #111;
+        --bg: #fbf1c7;
+        --bg-soft: #ebdbb2;
+        --surface: #f2e5bc;
+        --text: #3c3836;
+        --muted: #504945;
+        --border: #7c6f64;
+        --accent: #d65d0e;
+        --accent-strong: #fe8019;
+        --green: #689d6a;
+        --yellow: #d79921;
     }
 
     :global(body.dark) {
-        --bg: #4c4f69;
-        --text: #eff1f5;
-        --muted: #d1d5db;
-        --border: #f3f4f6;
+        --bg: #1d2021;
+        --bg-soft: #282828;
+        --surface: #3c3836;
+        --text: #ebdbb2;
+        --muted: #d5c4a1;
+        --border: #a89984;
+        --accent: #fe8019;
+        --accent-strong: #fabd2f;
+        --green: #98971a;
+        --yellow: #d79921;
     }
 
     :global(body) {
         background: var(--bg);
         color: var(--text);
         transition: background 0.2s ease, color 0.2s ease;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-family: "Segoe UI", Tahoma, sans-serif;
     }
 </style>
 
