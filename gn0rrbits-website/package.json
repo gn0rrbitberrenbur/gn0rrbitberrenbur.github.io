@@ -24,5 +24,8 @@
 	"imports": {
 		"#lib": "./src/lib/index.js",
 		"#lib/*": "./src/lib/*"
+	},
+	"dependencies": {
+		"svelte-gomoku": "https://github.com/gn0rrbitberrenbur/svelte-gomoku/releases/download/v0.0.1/svelte-gomoku-0.0.1.tgz"
 	}
 }
