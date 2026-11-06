@@ -28,7 +28,8 @@
         justify-content: flex-end;
         align-items: center;
         padding: 1rem 1.5rem;
-        background: var(--bg);
+        background: var(--bg-soft);
+        border-bottom: 1px solid var(--border);
     }
 
     .nav-actions {
@@ -55,8 +56,8 @@
 
     .navbar a:hover,
     .theme-toggle:hover {
-       border-color: var(--text);
-       background: rgba(255, 255, 255, 0.08);
+       border-color: var(--accent);
+       background: rgba(254, 128, 25, 0.12);
        text-decoration: none;
     }
 </style>

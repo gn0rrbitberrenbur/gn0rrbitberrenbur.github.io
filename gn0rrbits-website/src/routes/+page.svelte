@@ -4,6 +4,7 @@
 
 <div class="page">
     <main class="content">
+    <h1>Welcome!</h1>
         <p>
             My name is Chris, and I'm a Computer enthusiast. My interests span computer
             science, natural sciences, and economics. Currently, I'm completing an
@@ -17,7 +18,6 @@
 <style>
     :global(body) {
         margin: 0;
-        font-family: Georgia, serif;
         background: var(--bg);
         color: var(--text);
         line-height: 1.7;
