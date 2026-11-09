@@ -523,10 +523,22 @@
             </div>
         </section>
 
-        <section class="panel" aria-label="Search Statistics">
-            <div class="debug-heading">
-                <div>
-                    <h2>Search Statistics</h2>
+        <details class="metrics-options">
+            <summary>
+                <div class="summary-content">
+                    <span>Search Statistics</span>
+                    <span class="debug-state" class:active={debugEnabled}>
+                        {debugEnabled ? "Live metrics on" : "Live metrics off"}
+                    </span>
+                </div>
+            </summary>
+
+            <div class="metrics-options-content">
+                {#if metricsWarning}
+                    <p class="warning" role="alert">{metricsWarning}</p>
+                {/if}
+
+                <div class="debug-heading">
                     <p>
                         {#if !debugEnabled}
                             Live metrics disabled.
@@ -540,24 +552,16 @@
                     </p>
                 </div>
 
-                <span class="debug-state" class:active={debugEnabled}>
-                    {debugEnabled ? "Live metrics on" : "Live metrics off"}
-                </span>
+                <dl class="metrics-grid">
+                    {#each metricCards as card (card.label)}
+                        <div class="metric-card">
+                            <dt>{card.label}</dt>
+                            <dd>{card.value}</dd>
+                        </div>
+                    {/each}
+                </dl>
             </div>
-
-            {#if metricsWarning}
-                <p class="warning" role="alert">{metricsWarning}</p>
-            {/if}
-
-            <dl class="metrics-grid">
-                {#each metricCards as card (card.label)}
-                    <div class="metric-card">
-                        <dt>{card.label}</dt>
-                        <dd>{card.value}</dd>
-                    </div>
-                {/each}
-            </dl>
-        </section>
+        </details>
     {/if}
 </main>
 
@@ -784,6 +788,35 @@
         color: var(--green);
         border-color: var(--green);
         background: rgba(104, 157, 106, 0.12);
+    }
+
+    .metrics-options {
+        width: 100%;
+        border: 1px solid var(--border);
+        border-radius: 0.8rem;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0.02);
+    }
+
+    .metrics-options summary {
+        cursor: pointer;
+        padding: 0.8rem 1rem;
+        list-style: none;
+        font-weight: 700;
+        color: var(--text);
+    }
+
+    .summary-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+    }
+
+    .metrics-options-content {
+        display: grid;
+        gap: 1rem;
+        padding: 0 1rem 1rem;
     }
 
     .metrics-grid {
