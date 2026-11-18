@@ -224,6 +224,9 @@ async function initialize(config: GameSettings): Promise<void> {
 
     // Das Protokoll zieht 500 ms vom angegebenen Turn-Timeout ab.
     sendCommand(`INFO timeout_turn ${settings.searchTimeMs + 500}`);
+    sendCommand(`INFO depth ${settings.maxDepth}`);
+    sendCommand(`INFO max_nodes ${settings.maxNodes}`);
+    sendCommand(`INFO max_memory ${settings.ttSizeBytes}`);
 
     toggleDebug();
 

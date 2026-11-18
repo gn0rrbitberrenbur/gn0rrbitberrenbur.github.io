@@ -5,6 +5,9 @@ export interface GameSettings {
     boardSize: number;
     searchTimeMs: number;
     debugIntervalMs: number;
+    maxDepth: number;
+    maxNodes: number;
+    ttSizeBytes: number;
 }
 
 export function validateSettings(settings: GameSettings): string | null {
@@ -37,6 +40,35 @@ export function validateSettings(settings: GameSettings): string | null {
         settings.debugIntervalMs > 60000
     ) {
         return 'Debug interval must be between 1 and 60000 ms.';
+    }
+
+    if (
+        !Number.isInteger(settings.maxDepth) ||
+        settings.maxDepth < 1 ||
+        settings.maxDepth > 20
+    ) {
+        return 'Maximum depth must be between 1 and 20.';
+    }
+
+    if (
+        !Number.isInteger(settings.maxNodes) ||
+        settings.maxNodes < 0 ||
+        settings.maxNodes > 2147483647
+    ) {
+        return 'Maximum nodes must be between 0 and 2147483647.';
+    }
+
+    const allowedTtSizes = [
+        0,
+        16 * 1024 * 1024,
+        32 * 1024 * 1024,
+        64 * 1024 * 1024,
+        128 * 1024 * 1024,
+        256 * 1024 * 1024,
+    ];
+
+    if (!allowedTtSizes.includes(settings.ttSizeBytes)) {
+        return 'Choose a valid TT memory size.';
     }
 
     return null;

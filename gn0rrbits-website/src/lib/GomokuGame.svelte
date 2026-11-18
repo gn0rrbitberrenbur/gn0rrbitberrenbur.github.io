@@ -22,6 +22,9 @@
         boardSize: 15,
         searchTimeMs: 2000,
         debugIntervalMs: 50,
+        maxDepth: 12,
+        maxNodes: 0,
+        ttSizeBytes: 0,
     });
 
     let settings = $state<GameSettings>({
@@ -29,6 +32,9 @@
         boardSize: 15,
         searchTimeMs: 2000,
         debugIntervalMs: 50,
+        maxDepth: 12,
+        maxNodes: 0,
+        ttSizeBytes: 0,
     });
 
     let engineInfo = $state<EngineInfo | null>(null);
@@ -456,7 +462,10 @@
                 </label>
 
                 <details class="dev-options">
-                    <summary>devoptions</summary>
+                    <summary>
+                        <span class="dev-options-arrow" aria-hidden="true">▶</span>
+                        <span>devoptions</span>
+                    </summary>
 
                     <div class="dev-options-content">
                         <label>
@@ -484,6 +493,45 @@
                             />
                             <small>Progress updates at least after this interval.</small>
                         </label>
+
+                        <label>
+                            Maximum search depth
+                            <input
+                                type="number"
+                                min="1"
+                                max="20"
+                                step="1"
+                                required
+                                bind:value={draft.maxDepth}
+                            />
+                            <small>1 to 20 plies. Time limits may stop earlier.</small>
+                        </label>
+
+                        <label>
+                            Maximum recursive nodes
+                            <input
+                                type="number"
+                                min="0"
+                                max="2147483647"
+                                step="1"
+                                required
+                                bind:value={draft.maxNodes}
+                            />
+                            <small>0 disables the node limit.</small>
+                        </label>
+
+                        <label>
+                            TT memory budget
+                            <select bind:value={draft.ttSizeBytes}>
+                                <option value={0}>Default · 192 MiB</option>
+                                <option value={16 * 1024 * 1024}>16 MiB</option>
+                                <option value={32 * 1024 * 1024}>32 MiB</option>
+                                <option value={64 * 1024 * 1024}>64 MiB</option>
+                                <option value={128 * 1024 * 1024}>128 MiB</option>
+                                <option value={256 * 1024 * 1024}>256 MiB · capped at default</option>
+                            </select>
+                            <small>Entry storage is rounded down to a power-of-two size.</small>
+                        </label>
                     </div>
                 </details>
 
@@ -504,8 +552,11 @@
 
             <p class="game-summary">
                 {settings.boardSize} × {settings.boardSize}
-                · Search time: {formatNumber(settings.searchTimeMs)} ms · Debug interval:
-                {formatNumber(settings.debugIntervalMs)} ms
+                · Search time: {formatNumber(settings.searchTimeMs)} ms
+                · Max depth: {settings.maxDepth}
+                · Max nodes: {settings.maxNodes === 0 ? "unlimited" : formatNumber(settings.maxNodes)}
+                · TT: {settings.ttSizeBytes === 0 ? "default" : `${settings.ttSizeBytes / 1024 / 1024} MiB budget`}
+                · Debug interval: {formatNumber(settings.debugIntervalMs)} ms
             </p>
 
             <div class="board-frame" style={`--board-size: ${settings.boardSize}`}>
@@ -526,7 +577,10 @@
         <details class="metrics-options">
             <summary>
                 <div class="summary-content">
-                    <span>Search Statistics</span>
+                    <div class="metrics-summary-title">
+                        <span class="metrics-options-arrow" aria-hidden="true">▶</span>
+                        <span>Search Statistics</span>
+                    </div>
                     <span class="debug-state" class:active={debugEnabled}>
                         {debugEnabled ? "Live metrics on" : "Live metrics off"}
                     </span>
@@ -680,6 +734,9 @@
     }
 
     .dev-options summary {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
         cursor: pointer;
         padding: 0.7rem 0.8rem;
         font-weight: 700;
@@ -687,10 +744,18 @@
         list-style: none;
     }
 
-    .dev-options-content {
-        display: grid;
-        gap: 1rem;
-        padding: 0 0.8rem 0.9rem;
+    .dev-options summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .dev-options-arrow {
+        display: inline-block;
+        font-size: 0.75rem;
+        transition: transform 0.15s ease;
+    }
+
+    .dev-options[open] .dev-options-arrow {
+        transform: rotate(90deg);
     }
 
     .hint,
@@ -806,11 +871,31 @@
         color: var(--text);
     }
 
+    .metrics-options summary::-webkit-details-marker {
+        display: none;
+    }
+
     .summary-content {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 0.75rem;
+    }
+
+    .metrics-summary-title {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+    }
+
+    .metrics-options-arrow {
+        display: inline-block;
+        font-size: 0.75rem;
+        transition: transform 0.15s ease;
+    }
+
+    .metrics-options[open] .metrics-options-arrow {
+        transform: rotate(90deg);
     }
 
     .metrics-options-content {
